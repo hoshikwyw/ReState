@@ -13,7 +13,7 @@ const TabIcon = ({
   title: string;
 }) => {
   return (
-    <View className=" flex-1 mt-3 flex flex-col justify-center">
+    <View className=" flex-1 mt-3 flex flex-col justify-center items-center">
       <Image
         source={icon}
         tintColor={focused ? "#0061ff" : "#666876"}
