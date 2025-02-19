@@ -4,17 +4,17 @@ import { ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function AppLayout() {
-    const {loading, isLoggedIn} = useGlobalContext()
+  const { loading, isLoggedIn } = useGlobalContext();
 
-    if(loading) {
-        return (
-            <SafeAreaView className=" h-full flex justify-center items-center">
-                <ActivityIndicator className=" text-primary-300" size="large" />
-            </SafeAreaView>
-        )
-    }
+  if (loading) {
+    return (
+      <SafeAreaView className=" h-full flex justify-center items-center">
+        <ActivityIndicator className=" text-primary-300" size="large" />
+      </SafeAreaView>
+    );
+  }
 
-    // if(!isLoggedIn) return <Redirect href="/" />
+  if (!isLoggedIn) return <Redirect href="/sign-in" />;
 
-    return <Slot />
+  return <Slot />;
 }
