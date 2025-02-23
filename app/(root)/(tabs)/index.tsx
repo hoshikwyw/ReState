@@ -55,7 +55,7 @@ export default function Index() {
 
   return (
     <SafeAreaView className=" bg-white h-full">
-      <Button title="Seed" onPress={seed} />
+      {/* <Button title="Seed" onPress={seed} /> */}
       <FlatList
         data={properties}
         renderItem={({ item }) => (
@@ -121,7 +121,7 @@ export default function Index() {
                       onPress={() => handleCardPress(item.$id)}
                     />
                   )}
-                  keyExtractor={(item) => item.toString()}
+                  keyExtractor={(item) => item.$id}
                   horizontal
                   bounces={false}
                   showsHorizontalScrollIndicator={false}
